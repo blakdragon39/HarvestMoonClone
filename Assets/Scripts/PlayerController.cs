@@ -10,29 +10,32 @@ public class PlayerController : MonoBehaviour {
     private readonly int moveYId = Animator.StringToHash("moveY");
     private readonly int isWalkingId = Animator.StringToHash("isWalking");
 
+    private Vector2 input;
     private Vector2 lastInput;
 
     private void Awake() {
         animator = GetComponent<Animator>();
     }
 
-    public void Update() {
-        Vector2 newInput;
-        newInput.x = Input.GetAxisRaw("Horizontal");
-        newInput.y = Input.GetAxisRaw("Vertical");
+    private void Update() {
+        UpdateInput();
 
-        if (newInput.x != 0 || newInput.y != 0) {
-            lastInput.x = newInput.x;
-            lastInput.y = newInput.y;
-        }
-
-        if (newInput == Vector2.zero) {
+        if (input == Vector2.zero) {
             animator.Rebind();
-            animator.Update(0f);
         }
-        
+
         animator.SetFloat(moveXId, lastInput.x);
         animator.SetFloat(moveYId, lastInput.y);
-        animator.SetBool(isWalkingId, newInput != Vector2.zero);
+        animator.SetBool(isWalkingId, input != Vector2.zero);
+    }
+
+    private void UpdateInput() {
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+
+        if (input != Vector2.zero) {
+            lastInput.x = input.x;
+            lastInput.y = input.y;
+        }
     }
 }
