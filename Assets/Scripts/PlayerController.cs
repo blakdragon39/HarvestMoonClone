@@ -1,9 +1,10 @@
-using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
 public class PlayerController : MonoBehaviour {
-
+    
+    [SerializeField] private float moveSpeed;
+    
     private Animator animator;
 
     private readonly int moveXId = Animator.StringToHash("moveX");
@@ -19,14 +20,8 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         UpdateInput();
-
-        if (input == Vector2.zero) {
-            animator.Rebind();
-        }
-
-        animator.SetFloat(moveXId, lastInput.x);
-        animator.SetFloat(moveYId, lastInput.y);
-        animator.SetBool(isWalkingId, input != Vector2.zero);
+        UpdateAnimation();
+        Move();
     }
 
     private void UpdateInput() {
@@ -37,5 +32,19 @@ public class PlayerController : MonoBehaviour {
             lastInput.x = input.x;
             lastInput.y = input.y;
         }
+    }
+
+    private void UpdateAnimation() {
+        if (input == Vector2.zero) {
+            animator.Rebind();
+        }
+
+        animator.SetFloat(moveXId, lastInput.x);
+        animator.SetFloat(moveYId, lastInput.y);
+        animator.SetBool(isWalkingId, input != Vector2.zero);
+    }
+
+    private void Move() {
+        transform.position += new Vector3(input.x * Time.deltaTime * moveSpeed, input.y * Time.deltaTime * moveSpeed);
     }
 }
