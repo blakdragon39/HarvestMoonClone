@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2650004602734886617}
   - component: {fileID: 2650004602734886615}
   - component: {fileID: 2650004602734886616}
+  - component: {fileID: 145627942994759815}
   m_Layer: 5
   m_Name: InventoryTile
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &145627942994759815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650004602734886618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9763804fb576344db946a232857d80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotImage: {fileID: 2838690288657338404}
 --- !u!1 &8536554494434174630
 GameObject:
   m_ObjectHideFlags: 0
