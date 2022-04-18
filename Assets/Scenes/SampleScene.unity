@@ -5246,24 +5246,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de062d4ed6be78e478e84b1c576b6fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot1: {fileID: 2650004602843046064}
-  slot2: {fileID: 1098608340}
-  slot3: {fileID: 1934844511}
-  slot4: {fileID: 2116152694}
-  slot5: {fileID: 1756384243}
-  slot6: {fileID: 87779602}
-  slot7: {fileID: 1093087269}
-  slot8: {fileID: 1455356717}
-  slot9: {fileID: 2035561291}
-  item1: {fileID: 11400000, guid: 638351dd2ecd5694d9c3670611f0fa5d, type: 2}
-  item2: {fileID: 11400000, guid: e19fb1c3d04bf994cbaf1835e3497cf9, type: 2}
-  item3: {fileID: 11400000, guid: 96b41ec3f73c9ba4bb135322815c6e9d, type: 2}
-  item4: {fileID: 11400000, guid: 916c4ecc87c95e74faf12ef417dc01c0, type: 2}
-  item5: {fileID: 0}
-  item6: {fileID: 0}
-  item7: {fileID: 0}
-  item8: {fileID: 0}
-  item9: {fileID: 0}
+  slots:
+  - {fileID: 2650004602843046064}
+  - {fileID: 1098608340}
+  - {fileID: 1934844511}
+  - {fileID: 2116152694}
+  - {fileID: 1756384243}
+  - {fileID: 87779602}
+  - {fileID: 1093087269}
+  - {fileID: 1455356717}
+  - {fileID: 2035561291}
+  items:
+  - {fileID: 11400000, guid: 638351dd2ecd5694d9c3670611f0fa5d, type: 2}
+  - {fileID: 11400000, guid: e19fb1c3d04bf994cbaf1835e3497cf9, type: 2}
+  - {fileID: 11400000, guid: 96b41ec3f73c9ba4bb135322815c6e9d, type: 2}
+  - {fileID: 11400000, guid: 916c4ecc87c95e74faf12ef417dc01c0, type: 2}
 --- !u!1 &878405592
 GameObject:
   m_ObjectHideFlags: 0
