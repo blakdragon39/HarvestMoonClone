@@ -5,17 +5,13 @@ public class PlayerController : MonoBehaviour {
     
     [SerializeField] private float moveSpeed;
     
-    private Animator animator;
-
-    private readonly int moveXId = Animator.StringToHash("moveX");
-    private readonly int moveYId = Animator.StringToHash("moveY");
-    private readonly int isWalkingId = Animator.StringToHash("isWalking");
+    private PlayerAnimator animator;
 
     private Vector2 input;
     private Vector2 lastInput;
 
     private void Awake() {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<PlayerAnimator>();
     }
 
     private void Update() {
@@ -36,12 +32,12 @@ public class PlayerController : MonoBehaviour {
 
     private void UpdateAnimation() {
         if (input == Vector2.zero) {
-            animator.Rebind();
+            animator.ItemAction = ItemAction.None;
         }
 
-        animator.SetFloat(moveXId, lastInput.x);
-        animator.SetFloat(moveYId, lastInput.y);
-        animator.SetBool(isWalkingId, input != Vector2.zero);
+        animator.MoveX = lastInput.x;
+        animator.MoveY = lastInput.y;
+        animator.IsMoving = input != Vector2.zero;
     }
 
     private void Move() {
