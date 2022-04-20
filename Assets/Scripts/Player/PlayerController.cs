@@ -6,15 +6,23 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float moveSpeed;
     
     private PlayerAnimator animator;
+    private Inventory inventory;
 
     private Vector2 input;
     private Vector2 lastInput;
 
     private void Awake() {
         animator = GetComponent<PlayerAnimator>();
+        inventory = GetComponent<Inventory>();
     }
 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.Z) && inventory.SelectedItem.ItemAction != ItemAction.None) {
+            StartCoroutine(animator.StartItemAction(inventory.SelectedItem.ItemAction));
+        }
+
+        if (!animator.CanMove) return;
+        
         UpdateInput();
         UpdateAnimation();
         Move();
@@ -32,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 
     private void UpdateAnimation() {
         if (input == Vector2.zero) {
-            animator.ItemAction = ItemAction.None;
+            // animator.ItemAction = ItemAction.None;
         }
 
         animator.MoveX = lastInput.x;

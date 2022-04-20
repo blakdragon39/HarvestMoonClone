@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,11 +13,12 @@ public class SpriteAnimator {
     private float timer;
 
     public List<Sprite> Frames => frames;
+    public bool CanCancel { get; private set; } = true;
     
     public SpriteAnimator(
         List<Sprite> frames, 
         SpriteRenderer spriteRenderer, 
-        bool flipSprites = false, 
+        bool flipSprites = false,
         float frameRate = 0.16f
     ) {
         this.frames = frames;
@@ -41,5 +43,17 @@ public class SpriteAnimator {
             spriteRenderer.sprite = frames[currentFrame];
             timer -= frameRate;
         }
+    }
+
+    public IEnumerator StartAsCoroutine() {
+        Start();
+        CanCancel = false;
+        
+        while (currentFrame + 1 != frames.Count) {
+            AdvanceFrame();
+            yield return null;
+        }
+
+        CanCancel = true;
     }
 }

@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
     
-    private Item selectedItem;
-
     [SerializeField] private List<InventorySlot> slots;
     [SerializeField] private List<Item> items;
+    
+    private Item selectedItem;
+
+    public Item SelectedItem => selectedItem;
 
     private void Start() {
         for (int i = 0; i < slots.Count && i < items.Count; i += 1) {

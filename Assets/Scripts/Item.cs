@@ -6,8 +6,10 @@ public class Item : ScriptableObject {
     [SerializeField] private string name;
     [SerializeField] private Sprite unselectedSprite;
     [SerializeField] private Sprite selectedSprite;
+    [SerializeField] private ItemAction itemAction;
 
     public string Name => name;
     public Sprite UnselectedSprite => unselectedSprite;
     public Sprite SelectedSprite => selectedSprite;
+    public ItemAction ItemAction => itemAction;
 }

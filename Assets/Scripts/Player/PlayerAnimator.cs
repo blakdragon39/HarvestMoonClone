@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,8 +44,9 @@ public class PlayerAnimator : MonoBehaviour {
     public float MoveX { get; set; }
     public float MoveY { get; set; }
     public bool IsMoving { get; set; }
-    public ItemAction ItemAction { get; set; } = ItemAction.None;
-    
+
+    public bool CanMove => currentAnim == null || currentAnim.CanCancel;
+
     private SpriteRenderer renderer;
 
     private SpriteAnimator prevAnim;
@@ -93,8 +95,8 @@ public class PlayerAnimator : MonoBehaviour {
         wateringCanAnims = new Dictionary<FacingDirection, SpriteAnimator> {
             {FacingDirection.Up, new SpriteAnimator(wateringCanUpSprites, renderer)},
             {FacingDirection.Down, new SpriteAnimator(wateringCanDownSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(wateringCanLeftSprites, renderer, flipSprites: true)},
-            {FacingDirection.Left, new SpriteAnimator(wateringCanLeftSprites, renderer)}
+            {FacingDirection.Left, new SpriteAnimator(wateringCanLeftSprites, renderer)},
+            {FacingDirection.Right, new SpriteAnimator(wateringCanLeftSprites, renderer, flipSprites: true)}
         };
 
         anims = new Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> {
@@ -110,17 +112,26 @@ public class PlayerAnimator : MonoBehaviour {
     }
 
     private void Update() {
-        prevAnim = this.currentAnim;
+        if (!CanMove) return;
+        
+        prevAnim = currentAnim;
         var direction = GetFacingDirection();
-        currentAnim = anims[ItemAction][direction];
+        currentAnim = anims[ItemAction.None][direction];
+        
+        if (!currentAnim.CanCancel) return;
         
         if (prevAnim != currentAnim) {
             currentAnim.Start();
         }
-
+        
         if (IsMoving) {
             currentAnim.AdvanceFrame();
         }
+    }
+
+    public IEnumerator StartItemAction(ItemAction action) {
+        currentAnim = anims[action][GetFacingDirection()];
+        yield return currentAnim.StartAsCoroutine();
     }
 
     private FacingDirection GetFacingDirection() {
@@ -135,6 +146,7 @@ public enum FacingDirection {
     Down, Up, Left, Right
 }
 
+[System.Serializable]
 public enum ItemAction {
     None, Axe, Hammer, Hoe, Scythe, WateringCan
 }
