@@ -4,6 +4,7 @@ using Vector2 = UnityEngine.Vector2;
 public class PlayerController : MonoBehaviour {
     
     [SerializeField] private float moveSpeed;
+    [SerializeField] private CropTiles cropTiles;
     
     private PlayerAnimator animator;
     private Inventory inventory;
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour {
         UpdateInput();
         UpdateAnimation();
         Move();
+
+        HighlightCropTiles();
     }
 
     private void UpdateInput() {
@@ -50,5 +53,11 @@ public class PlayerController : MonoBehaviour {
 
     private void Move() {
         transform.position += new Vector3(input.x * Time.deltaTime * moveSpeed, input.y * Time.deltaTime * moveSpeed);
+    }
+
+    private void HighlightCropTiles() {
+        var facingTilePos = transform.position + (animator.GetFacingDirection().Vector());
+        // Debug.DrawLine(transform.position, facingTilePos, Color.red);
+        cropTiles.SetTileHighlighted(facingTilePos, true);
     }
 }

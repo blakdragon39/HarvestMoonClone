@@ -134,16 +134,12 @@ public class PlayerAnimator : MonoBehaviour {
         yield return currentAnim.StartAsCoroutine();
     }
 
-    private FacingDirection GetFacingDirection() {
+    public FacingDirection GetFacingDirection() {
         if (MoveX == 1) return FacingDirection.Right;
         if (MoveX == -1) return FacingDirection.Left;
         if (MoveY == 1) return FacingDirection.Up;
         return FacingDirection.Down; // MoveY == -1
     }
-}
-
-public enum FacingDirection {
-    Down, Up, Left, Right
 }
 
 [System.Serializable]
