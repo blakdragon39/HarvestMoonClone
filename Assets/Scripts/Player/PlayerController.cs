@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
         UpdateInput();
         UpdateAnimation();
         Move();
-
+        
         HighlightCropTiles();
     }
 
@@ -42,10 +42,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void UpdateAnimation() {
-        if (input == Vector2.zero) {
-            // animator.ItemAction = ItemAction.None;
-        }
-
         animator.MoveX = lastInput.x;
         animator.MoveY = lastInput.y;
         animator.IsMoving = input != Vector2.zero;
@@ -56,8 +52,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void HighlightCropTiles() {
-        var facingTilePos = transform.position + (animator.GetFacingDirection().Vector());
-        // Debug.DrawLine(transform.position, facingTilePos, Color.red);
-        cropTiles.SetTileHighlighted(facingTilePos, true);
+        if (inventory.SelectedItem != null && CropHighlights.actions.Contains(inventory.SelectedItem.ItemAction)) {
+            var facingTilePos = transform.position + (animator.GetFacingDirection().FacingTileVector());
+            // Debug.DrawLine(transform.position, facingTilePos, Color.red);
+            cropTiles.SetTileHighlighted(facingTilePos, true);
+        } else {
+            cropTiles.UnhighlightTiles();
+        }
     }
 }

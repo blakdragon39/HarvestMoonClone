@@ -5,16 +5,16 @@ public enum FacingDirection {
 }
 
 public static class FacingDirectionExtensions {
-    public static Vector3 Vector(this FacingDirection dir) {
+    public static Vector3 FacingTileVector(this FacingDirection dir) {
         switch (dir) {
-            case FacingDirection.Down:
-                return Vector3.down;
-            case FacingDirection.Up:
-                return Vector3.up;
             case FacingDirection.Left:
                 return Vector3.left;
             case FacingDirection.Right:
                 return Vector3.right;
+            case FacingDirection.Down:
+                return new Vector3(0f, -0.5f, 0);
+            case FacingDirection.Up:
+                return new Vector3(0f, 0.5f, 0);
         }
         
         return Vector3.zero;

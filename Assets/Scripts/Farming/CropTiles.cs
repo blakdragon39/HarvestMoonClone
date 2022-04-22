@@ -12,6 +12,7 @@ public class CropTiles : MonoBehaviour {
 
     private void Awake() {
         grid = GetComponent<Grid>();
+        Debug.Log($"prevTilePos {prevTilePos}");
     }
 
     public void SetTileHighlighted(Vector3 position, bool highlighted) {
@@ -26,5 +27,10 @@ public class CropTiles : MonoBehaviour {
 
             prevTilePos = tilePos;
         }
+    }
+
+    public void UnhighlightTiles() {
+        cropsHighlightTileMap.SetTile(prevTilePos, null);
+        prevTilePos = Vector3Int.zero;
     }
 }

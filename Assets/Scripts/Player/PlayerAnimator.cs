@@ -126,6 +126,8 @@ public class PlayerAnimator : MonoBehaviour {
         
         if (IsMoving) {
             currentAnim.AdvanceFrame();
+        } else {
+            currentAnim.Start();
         }
     }
 
@@ -140,9 +142,4 @@ public class PlayerAnimator : MonoBehaviour {
         if (MoveY == 1) return FacingDirection.Up;
         return FacingDirection.Down; // MoveY == -1
     }
-}
-
-[System.Serializable]
-public enum ItemAction {
-    None, Axe, Hammer, Hoe, Scythe, WateringCan
 }
