@@ -6412,7 +6412,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2044573689
   m_SortingLayer: 2
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -6433,7 +6433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1288044470}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1093087268
 PrefabInstance:
@@ -6710,8 +6710,8 @@ Transform:
   m_Children:
   - {fileID: 504053590}
   - {fileID: 389023250}
-  - {fileID: 1748524560}
   - {fileID: 914752535}
+  - {fileID: 1748524560}
   - {fileID: 654478582}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -6734,7 +6734,9 @@ MonoBehaviour:
   cropHighlights: {fileID: 654478584}
   highlightTile: {fileID: 11400000, guid: 227bd14515829c443a0b7d2e85ba706c, type: 2}
   plantedTile: {fileID: 11400000, guid: f29d5835f762cb749bdbebf3d5696466, type: 2}
+  seedlingTile: {fileID: 11400000, guid: c3c58f3f5ce416a4ea3350dec535f3d4, type: 2}
   wateredTile: {fileID: 11400000, guid: bce829b39e77a7e4b9fb77176ca17414, type: 2}
+  growthTime: 30
 --- !u!1001 &1455356716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7041,7 +7043,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2044573689
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -7062,7 +7064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1288044470}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1756384242
 PrefabInstance:
