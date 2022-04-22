@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Z) && inventory.SelectedItem.ItemAction != ItemAction.None) {
             StartCoroutine(animator.StartItemAction(inventory.SelectedItem.ItemAction));
+            HandleItemAction();
         }
 
         if (!animator.CanMove) return;
@@ -51,13 +52,21 @@ public class PlayerController : MonoBehaviour {
         transform.position += new Vector3(input.x * Time.deltaTime * moveSpeed, input.y * Time.deltaTime * moveSpeed);
     }
 
+    private void HandleItemAction() {
+        if (inventory.SelectedItem.ItemAction == ItemAction.PlantSeed) {
+            cropTiles.PlantSeed(GetFacingTilePos());
+        }
+    }
+
     private void HighlightCropTiles() {
         if (inventory.SelectedItem != null && CropHighlights.actions.Contains(inventory.SelectedItem.ItemAction)) {
-            var facingTilePos = transform.position + (animator.GetFacingDirection().FacingTileVector());
-            // Debug.DrawLine(transform.position, facingTilePos, Color.red);
-            cropTiles.SetTileHighlighted(facingTilePos, true);
+            cropTiles.SetTileHighlighted(GetFacingTilePos(), true);
         } else {
             cropTiles.UnhighlightTiles();
         }
+    }
+
+    private Vector3 GetFacingTilePos() {
+        return transform.position + (animator.GetFacingDirection().FacingTileVector());
     }
 }

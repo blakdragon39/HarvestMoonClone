@@ -2,27 +2,37 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class CropTiles : MonoBehaviour {
-
+    
+    [SerializeField] private Tilemap cropTiles;
+    [SerializeField] private Tilemap cropsPlanted;
+    [SerializeField] private Tilemap cropHighlights;
+    
     [SerializeField] private Tile highlightTile;
-    [SerializeField] private Tilemap cropTileMap;
-    [SerializeField] private Tilemap cropsHighlightTileMap;
+    [SerializeField] private Tile plantedTile;
+    
     private Grid grid;
 
     private Vector3Int prevTilePos;
 
     private void Awake() {
         grid = GetComponent<Grid>();
-        Debug.Log($"prevTilePos {prevTilePos}");
+    }
+
+    public void PlantSeed(Vector3 position) {
+        var tilePos = position.GetCellPosition(grid);
+        if (cropTiles.GetTile(tilePos) != null) {
+            cropsPlanted.SetTile(tilePos, plantedTile);
+        }
     }
 
     public void SetTileHighlighted(Vector3 position, bool highlighted) {
-        var tilePos = grid.WorldToCell(position);
+        var tilePos = position.GetCellPosition(grid);
 
         if (tilePos != prevTilePos) {
-            cropsHighlightTileMap.SetTile(prevTilePos, null);
+            cropHighlights.SetTile(prevTilePos, null);
             
-            if (cropTileMap.GetTile(tilePos) != null) {
-                cropsHighlightTileMap.SetTile(tilePos, highlighted ? highlightTile : null);
+            if (cropTiles.GetTile(tilePos) != null) {
+                cropHighlights.SetTile(tilePos, highlighted ? highlightTile : null);
             }
 
             prevTilePos = tilePos;
@@ -30,7 +40,13 @@ public class CropTiles : MonoBehaviour {
     }
 
     public void UnhighlightTiles() {
-        cropsHighlightTileMap.SetTile(prevTilePos, null);
+        cropHighlights.SetTile(prevTilePos, null);
         prevTilePos = Vector3Int.zero;
+    }
+}
+
+static class CropTilesExtensions {
+    public static Vector3Int GetCellPosition(this Vector3 position, Grid grid) {
+        return grid.WorldToCell(position);
     }
 }
