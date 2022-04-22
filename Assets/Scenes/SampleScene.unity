@@ -6074,6 +6074,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 96b41ec3f73c9ba4bb135322815c6e9d, type: 2}
   - {fileID: 11400000, guid: 916c4ecc87c95e74faf12ef417dc01c0, type: 2}
   - {fileID: 11400000, guid: f2c1e352ec399e045ac7f9ebd14d1173, type: 2}
+  - {fileID: 11400000, guid: 28f15523e9500b4458612503813c5d4a, type: 2}
 --- !u!114 &816508199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6105,91 +6106,80 @@ MonoBehaviour:
   - {fileID: -8032553386085128389, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: 5671105471239679310, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: 6313759101595150715, guid: e621aacd5396ba245891789aace46f82, type: 3}
-  - {fileID: 812371751035414405, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingAxeUpSprites:
   - {fileID: -6949167711685286381, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: 2954758929750582997, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: -292148553009050994, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: -449329477695013316, guid: e621aacd5396ba245891789aace46f82, type: 3}
-  - {fileID: 4382213933962626253, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingAxeRightSprites:
   - {fileID: 4107677289802140539, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: -7687266608453994162, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: -6638528570060811683, guid: e621aacd5396ba245891789aace46f82, type: 3}
   - {fileID: 2809316572730766418, guid: e621aacd5396ba245891789aace46f82, type: 3}
-  - {fileID: 7803513536422169279, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHoeDownSprites:
   - {fileID: 5453320359807173223, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: -3246681797926704896, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: 7502143314063518533, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: -1344802472108667663, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
-  - {fileID: 812371751035414405, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHoeUpSprites:
   - {fileID: 8635217275372406981, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: 5038787575304325128, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: 6744234115344163584, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: -409087796401131255, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
-  - {fileID: 4382213933962626253, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHoeRightSprites:
   - {fileID: -2677668633594724600, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: -2746543833219503498, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: -7120978482444308881, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
   - {fileID: 8166978329205387761, guid: 86c319e9b0a418545a5bb91a53f53c34, type: 3}
-  - {fileID: 7803513536422169279, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHammerDownSprites:
   - {fileID: -7779232981729391229, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -4124870838371589353, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: 4632508666145438330, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -7642758996071181231, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
-  - {fileID: 812371751035414405, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHammerUpSprites:
   - {fileID: 2335648001585979480, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -8000278137921608350, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -3472905506438944776, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: 8688992952236878057, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
-  - {fileID: 4382213933962626253, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingHammerRightSprites:
   - {fileID: -7845951451814917466, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -586460023990024445, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -86929269652348075, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
   - {fileID: -6989921821908346743, guid: e1f9b1f244320a249b49f7e463e6c3df, type: 3}
-  - {fileID: 7803513536422169279, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingScytheDownSprites:
   - {fileID: -5851654167639858992, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: -200439525867291535, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: -7903803720613039119, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: -1499988975883170797, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
-  - {fileID: 812371751035414405, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingScytheUpSprites:
   - {fileID: 745816337560818824, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: -2286004264450081742, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: 8297248800523050738, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: 8788991905348612345, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
-  - {fileID: 4382213933962626253, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   swingScytheRightSprites:
   - {fileID: 233869836655165697, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: 4527381812729086743, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: 3476004864030846470, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
   - {fileID: -7224094610395856137, guid: 0cf42fbc634959d4892a9f4a0a4aa11d, type: 3}
-  - {fileID: 7803513536422169279, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   wateringCanDownSprites:
   - {fileID: -6559262757499026201, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: -3885601915961937672, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 6255971405385569912, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 8393925111367571326, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
-  - {fileID: 812371751035414405, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   wateringCanUpSprites:
   - {fileID: 8407268570583975544, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 7626987378403250168, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: -3274144403695665876, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 7294584305603551437, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
-  - {fileID: 4382213933962626253, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
   wateringCanLeftSprites:
   - {fileID: 1466183924288159620, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: -6230611843352438955, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 3409427191395240491, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
   - {fileID: 5712892844211963097, guid: a05612045e1b18041b465be8ba9f3cc3, type: 3}
-  - {fileID: 7803513536422169279, guid: 69cdf086a405de648b34521da169a3b8, type: 3}
+  plantSeedSprites:
+  - {fileID: -7841698499840590261, guid: 8416149574ce3884297ac07281c57627, type: 3}
+  - {fileID: 9176899046207785957, guid: 8416149574ce3884297ac07281c57627, type: 3}
+  - {fileID: 1966274759859727802, guid: 8416149574ce3884297ac07281c57627, type: 3}
 --- !u!1 &878405592
 GameObject:
   m_ObjectHideFlags: 0

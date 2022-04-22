@@ -28,6 +28,8 @@ public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private List<Sprite> wateringCanDownSprites;
     [SerializeField] private List<Sprite> wateringCanUpSprites;
     [SerializeField] private List<Sprite> wateringCanLeftSprites;
+
+    [SerializeField] private List<Sprite> plantSeedSprites;
     #endregion 
 
     #region SpriteAnimators
@@ -37,6 +39,7 @@ public class PlayerAnimator : MonoBehaviour {
     private Dictionary<FacingDirection, SpriteAnimator> swingHammerAnims;
     private Dictionary<FacingDirection, SpriteAnimator> swingScytheAnims;
     private Dictionary<FacingDirection, SpriteAnimator> wateringCanAnims;
+    private Dictionary<FacingDirection, SpriteAnimator> plantSeedAnims;
 
     private Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> anims;
     #endregion
@@ -99,13 +102,21 @@ public class PlayerAnimator : MonoBehaviour {
             {FacingDirection.Right, new SpriteAnimator(wateringCanLeftSprites, renderer, flipSprites: true)}
         };
 
+        plantSeedAnims = new Dictionary<FacingDirection, SpriteAnimator> {
+            {FacingDirection.Up, new SpriteAnimator(plantSeedSprites, renderer)},
+            {FacingDirection.Down, new SpriteAnimator(plantSeedSprites, renderer)},
+            {FacingDirection.Left, new SpriteAnimator(plantSeedSprites, renderer)},
+            {FacingDirection.Right, new SpriteAnimator(plantSeedSprites, renderer)}
+        };
+
         anims = new Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> {
             {ItemAction.None, walkAnims},
             {ItemAction.Axe, swingAxeAnims},
             {ItemAction.Hammer, swingHammerAnims},
             {ItemAction.Hoe, swingHoeAnims},
             {ItemAction.Scythe, swingScytheAnims},
-            {ItemAction.WateringCan, wateringCanAnims}
+            {ItemAction.WateringCan, wateringCanAnims},
+            {ItemAction.PlantSeed, plantSeedAnims}
         };
 
         #endregion
