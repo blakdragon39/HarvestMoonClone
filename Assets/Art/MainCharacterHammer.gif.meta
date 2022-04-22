@@ -41,6 +41,9 @@ TextureImporter:
   - first:
       213: -5841955825540846992
     second: MainCharacterHammer_13
+  - first:
+      213: -5417388531442180171
+    second: MainCharacterHammer_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +88,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31
+  spritePixelsToUnits: 29
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,12 +136,12 @@ TextureImporter:
       name: MainCharacterHammer_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 52
         y: 0
-        width: 35
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +157,12 @@ TextureImporter:
       name: MainCharacterHammer_2
       rect:
         serializedVersion: 2
-        x: 43
+        x: 104
         y: 0
-        width: 27
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +178,12 @@ TextureImporter:
       name: MainCharacterHammer_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 156
         y: 0
-        width: 26
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +199,12 @@ TextureImporter:
       name: MainCharacterHammer_4
       rect:
         serializedVersion: 2
-        x: 108
+        x: 208
         y: 0
-        width: 50
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +220,12 @@ TextureImporter:
       name: MainCharacterHammer_5
       rect:
         serializedVersion: 2
-        x: 166
+        x: 260
         y: 0
-        width: 37
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,12 +241,12 @@ TextureImporter:
       name: MainCharacterHammer_6
       rect:
         serializedVersion: 2
-        x: 212
+        x: 312
         y: 0
-        width: 24
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +262,12 @@ TextureImporter:
       name: MainCharacterHammer_7
       rect:
         serializedVersion: 2
-        x: 242
+        x: 364
         y: 0
-        width: 22
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,12 +283,12 @@ TextureImporter:
       name: MainCharacterHammer_8
       rect:
         serializedVersion: 2
-        x: 271
+        x: 416
         y: 0
-        width: 49
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,12 +304,12 @@ TextureImporter:
       name: MainCharacterHammer_9
       rect:
         serializedVersion: 2
-        x: 326
+        x: 468
         y: 0
-        width: 18
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,12 +325,12 @@ TextureImporter:
       name: MainCharacterHammer_10
       rect:
         serializedVersion: 2
-        x: 353
+        x: 520
         y: 0
-        width: 23
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,12 +346,12 @@ TextureImporter:
       name: MainCharacterHammer_11
       rect:
         serializedVersion: 2
-        x: 381
+        x: 572
         y: 0
-        width: 23
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,12 +367,12 @@ TextureImporter:
       name: MainCharacterHammer_12
       rect:
         serializedVersion: 2
-        x: 404
+        x: 624
         y: 0
-        width: 51
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -382,22 +385,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainCharacterHammer_13
+      name: MainCharacterHammer_0
       rect:
         serializedVersion: 2
-        x: 466
+        x: 0
         y: 0
-        width: 18
+        width: 52
         height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a2d11f0243deea0800000000000000
-      internalID: -5841955825540846992
+      spriteID: 5bf1d1d45d191d4b0800000000000000
+      internalID: -5417388531442180171
       vertices: []
       indices: 
       edges: []

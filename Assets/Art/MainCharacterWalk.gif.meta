@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31
+  spritePixelsToUnits: 29
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,12 +130,12 @@ TextureImporter:
       name: MainCharacterWalk_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 19
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: MainCharacterWalk_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 25
         y: 0
-        width: 18
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: MainCharacterWalk_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 50
         y: 0
-        width: 19
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: MainCharacterWalk_3
       rect:
         serializedVersion: 2
-        x: 66
+        x: 75
         y: 0
-        width: 17
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: MainCharacterWalk_4
       rect:
         serializedVersion: 2
-        x: 89
+        x: 100
         y: 0
-        width: 19
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: MainCharacterWalk_5
       rect:
         serializedVersion: 2
-        x: 111
+        x: 125
         y: 0
-        width: 18
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: MainCharacterWalk_6
       rect:
         serializedVersion: 2
-        x: 131
+        x: 150
         y: 0
-        width: 19
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: MainCharacterWalk_7
       rect:
         serializedVersion: 2
-        x: 153
+        x: 175
         y: 0
-        width: 18
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: MainCharacterWalk_8
       rect:
         serializedVersion: 2
-        x: 176
+        x: 200
         y: 0
-        width: 22
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: MainCharacterWalk_9
       rect:
         serializedVersion: 2
-        x: 200
+        x: 225
         y: 0
-        width: 22
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -340,12 +340,12 @@ TextureImporter:
       name: MainCharacterWalk_10
       rect:
         serializedVersion: 2
-        x: 226
+        x: 250
         y: 0
-        width: 22
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,12 +361,12 @@ TextureImporter:
       name: MainCharacterWalk_11
       rect:
         serializedVersion: 2
-        x: 251
+        x: 275
         y: 0
-        width: 23
+        width: 25
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
