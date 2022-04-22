@@ -54,7 +54,9 @@ public class PlayerController : MonoBehaviour {
 
     private void HandleItemAction() {
         if (inventory.SelectedItem.ItemAction == ItemAction.PlantSeed) {
-            cropTiles.PlantSeed(GetFacingTilePos());
+            cropTiles.PlantSeed();
+        } else if (inventory.SelectedItem.ItemAction == ItemAction.WateringCan) {
+            cropTiles.WaterTile();
         }
     }
 
