@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour {
     private void Update() {
         var selectedItemIndex = items.IndexOf(selectedItem);
         var scroll = Input.GetAxis("Mouse ScrollWheel");
-
         
         if (scroll > 0) selectedItemIndex -= 1;
         else if (scroll < 0) selectedItemIndex += 1;

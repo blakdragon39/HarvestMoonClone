@@ -4,12 +4,10 @@ using UnityEngine;
 public class Item : ScriptableObject {
 
     [SerializeField] private string name;
-    [SerializeField] private Sprite unselectedSprite;
-    [SerializeField] private Sprite selectedSprite;
+    [SerializeField] private Sprite sprite;
     [SerializeField] private ItemAction itemAction;
 
     public string Name => name;
-    public Sprite UnselectedSprite => unselectedSprite;
-    public Sprite SelectedSprite => selectedSprite;
+    public Sprite Sprite => sprite;
     public ItemAction ItemAction => itemAction;
 }

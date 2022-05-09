@@ -17,29 +17,19 @@ public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private List<Sprite> swingHoeUpSprites;
     [SerializeField] private List<Sprite> swingHoeRightSprites;
     
-    [SerializeField] private List<Sprite> swingHammerDownSprites;
-    [SerializeField] private List<Sprite> swingHammerUpSprites;
-    [SerializeField] private List<Sprite> swingHammerRightSprites;
-    
-    [SerializeField] private List<Sprite> swingScytheDownSprites;
-    [SerializeField] private List<Sprite> swingScytheUpSprites;
-    [SerializeField] private List<Sprite> swingScytheRightSprites;
-    
     [SerializeField] private List<Sprite> wateringCanDownSprites;
     [SerializeField] private List<Sprite> wateringCanUpSprites;
-    [SerializeField] private List<Sprite> wateringCanLeftSprites;
+    [SerializeField] private List<Sprite> wateringCanRightSprites;
 
-    [SerializeField] private List<Sprite> plantSeedSprites;
+    // [SerializeField] private List<Sprite> plantSeedSprites;
     #endregion 
 
     #region SpriteAnimators
     private Dictionary<FacingDirection, SpriteAnimator> walkAnims;
     private Dictionary<FacingDirection, SpriteAnimator> swingAxeAnims;
     private Dictionary<FacingDirection, SpriteAnimator> swingHoeAnims;
-    private Dictionary<FacingDirection, SpriteAnimator> swingHammerAnims;
-    private Dictionary<FacingDirection, SpriteAnimator> swingScytheAnims;
     private Dictionary<FacingDirection, SpriteAnimator> wateringCanAnims;
-    private Dictionary<FacingDirection, SpriteAnimator> plantSeedAnims;
+    // private Dictionary<FacingDirection, SpriteAnimator> plantSeedAnims;
 
     private Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> anims;
     #endregion
@@ -61,10 +51,10 @@ public class PlayerAnimator : MonoBehaviour {
         #region Init SpriteAnimators
 
         walkAnims = new Dictionary<FacingDirection, SpriteAnimator> {
-            {FacingDirection.Up, new SpriteAnimator(walkUpSprites, renderer)},
-            {FacingDirection.Down, new SpriteAnimator(walkDownSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(walkRightSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(walkRightSprites, renderer, flipSprites: true)},
+            {FacingDirection.Up, new SpriteAnimator(walkUpSprites, renderer, frameRate: .08f)},
+            {FacingDirection.Down, new SpriteAnimator(walkDownSprites, renderer, frameRate: .08f)},
+            {FacingDirection.Right, new SpriteAnimator(walkRightSprites, renderer, frameRate: .08f)},
+            {FacingDirection.Left, new SpriteAnimator(walkRightSprites, renderer, flipSprites: true, frameRate: .08f)},
         };
 
         swingAxeAnims = new Dictionary<FacingDirection, SpriteAnimator> {
@@ -73,50 +63,27 @@ public class PlayerAnimator : MonoBehaviour {
             {FacingDirection.Right, new SpriteAnimator(swingAxeRightSprites, renderer)},
             {FacingDirection.Left, new SpriteAnimator(swingAxeRightSprites, renderer, flipSprites: true)},
         };
-
-        swingHammerAnims = new Dictionary<FacingDirection, SpriteAnimator> {
-            {FacingDirection.Up, new SpriteAnimator(swingHammerUpSprites, renderer)},
-            {FacingDirection.Down, new SpriteAnimator(swingHammerDownSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(swingHammerRightSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(swingHammerRightSprites, renderer, flipSprites: true)}
-        };
-
+        
         swingHoeAnims = new Dictionary<FacingDirection, SpriteAnimator> {
             {FacingDirection.Up, new SpriteAnimator(swingHoeUpSprites, renderer)},
             {FacingDirection.Down, new SpriteAnimator(swingHoeDownSprites, renderer)},
             {FacingDirection.Right, new SpriteAnimator(swingHoeRightSprites, renderer)},
             {FacingDirection.Left, new SpriteAnimator(swingHoeRightSprites, renderer, flipSprites: true)}
         };
-
-        swingScytheAnims = new Dictionary<FacingDirection, SpriteAnimator> {
-            {FacingDirection.Up, new SpriteAnimator(swingScytheUpSprites, renderer)},
-            {FacingDirection.Down, new SpriteAnimator(swingScytheDownSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(swingScytheRightSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(swingScytheRightSprites, renderer, flipSprites: true)}
-        };
-
+        
         wateringCanAnims = new Dictionary<FacingDirection, SpriteAnimator> {
             {FacingDirection.Up, new SpriteAnimator(wateringCanUpSprites, renderer)},
             {FacingDirection.Down, new SpriteAnimator(wateringCanDownSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(wateringCanLeftSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(wateringCanLeftSprites, renderer, flipSprites: true)}
-        };
-
-        plantSeedAnims = new Dictionary<FacingDirection, SpriteAnimator> {
-            {FacingDirection.Up, new SpriteAnimator(plantSeedSprites, renderer)},
-            {FacingDirection.Down, new SpriteAnimator(plantSeedSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(plantSeedSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(plantSeedSprites, renderer)}
+            {FacingDirection.Left, new SpriteAnimator(wateringCanRightSprites, renderer)},
+            {FacingDirection.Right, new SpriteAnimator(wateringCanRightSprites, renderer, flipSprites: true)}
         };
 
         anims = new Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> {
             {ItemAction.None, walkAnims},
             {ItemAction.Axe, swingAxeAnims},
-            {ItemAction.Hammer, swingHammerAnims},
             {ItemAction.Hoe, swingHoeAnims},
-            {ItemAction.Scythe, swingScytheAnims},
             {ItemAction.WateringCan, wateringCanAnims},
-            {ItemAction.PlantSeed, plantSeedAnims}
+            // {ItemAction.PlantSeed, plantSeedAnims}
         };
 
         #endregion

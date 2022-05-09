@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Hoe
   m_EditorClassIdentifier: 
   name: Hoe
-  unselectedSprite: {fileID: -6494725418372228053, guid: 4bfa7a62123e3fb45a6230361aba517c, type: 3}
-  selectedSprite: {fileID: 1052834398496303298, guid: c963b77923158d8479d5ec6bbb63d7b0, type: 3}
+  sprite: {fileID: -6326554769541213105, guid: 7b715914811c26141b18a2ea64b95f87, type: 3}
   itemAction: 3

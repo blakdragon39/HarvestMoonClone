@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public enum ItemAction {
-    None, Axe, Hammer, Hoe, Scythe, WateringCan, PlantSeed
+    None, Axe, Hoe, WateringCan, PlantSeed
 }
 
 public static class CropHighlights {

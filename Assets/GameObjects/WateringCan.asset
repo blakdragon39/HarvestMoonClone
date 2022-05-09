@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: WateringCan
   m_EditorClassIdentifier: 
   name: Watering Can
-  unselectedSprite: {fileID: -4297013789019867691, guid: 4bfa7a62123e3fb45a6230361aba517c, type: 3}
-  selectedSprite: {fileID: 3324977368266969162, guid: c963b77923158d8479d5ec6bbb63d7b0, type: 3}
+  sprite: {fileID: -3736146023192578149, guid: 7b715914811c26141b18a2ea64b95f87, type: 3}
   itemAction: 5
