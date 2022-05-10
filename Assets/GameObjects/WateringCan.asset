@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Watering Can
   sprite: {fileID: -3736146023192578149, guid: 7b715914811c26141b18a2ea64b95f87, type: 3}
-  itemAction: 5
+  itemAction: 3

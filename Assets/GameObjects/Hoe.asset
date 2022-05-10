@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hoe
   sprite: {fileID: -6326554769541213105, guid: 7b715914811c26141b18a2ea64b95f87, type: 3}
-  itemAction: 3
+  itemAction: 2

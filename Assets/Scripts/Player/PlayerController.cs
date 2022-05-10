@@ -18,7 +18,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Z) && inventory.SelectedItem.ItemAction != ItemAction.None) {
+        if (
+            Input.GetKeyDown(KeyCode.Z) &&
+            inventory.SelectedItem != null && 
+            inventory.SelectedItem.ItemAction != ItemAction.None
+        ) {
             StartCoroutine(animator.StartItemAction(inventory.SelectedItem.ItemAction));
             HandleItemAction();
         }
@@ -53,10 +57,16 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void HandleItemAction() {
-        if (inventory.SelectedItem.ItemAction == ItemAction.PlantSeed) {
-            cropTiles.PlantSeed();
-        } else if (inventory.SelectedItem.ItemAction == ItemAction.WateringCan) {
-            cropTiles.WaterTile();
+        switch (inventory.SelectedItem.ItemAction) {
+            case ItemAction.PlantSeed:
+                cropTiles.PlantSeed();
+                break;
+            case ItemAction.Hoe:
+                cropTiles.HoeTile();
+                break;
+            case ItemAction.WateringCan:
+                cropTiles.WaterTile();
+                break;
         }
     }
 

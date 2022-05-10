@@ -19,7 +19,7 @@ public class SpriteAnimator {
         List<Sprite> frames, 
         SpriteRenderer spriteRenderer, 
         bool flipSprites = false,
-        float frameRate = 0.16f
+        float frameRate = 0.08f
     ) {
         this.frames = frames;
         this.spriteRenderer = spriteRenderer;

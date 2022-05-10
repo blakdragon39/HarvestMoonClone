@@ -51,10 +51,10 @@ public class PlayerAnimator : MonoBehaviour {
         #region Init SpriteAnimators
 
         walkAnims = new Dictionary<FacingDirection, SpriteAnimator> {
-            {FacingDirection.Up, new SpriteAnimator(walkUpSprites, renderer, frameRate: .08f)},
-            {FacingDirection.Down, new SpriteAnimator(walkDownSprites, renderer, frameRate: .08f)},
-            {FacingDirection.Right, new SpriteAnimator(walkRightSprites, renderer, frameRate: .08f)},
-            {FacingDirection.Left, new SpriteAnimator(walkRightSprites, renderer, flipSprites: true, frameRate: .08f)},
+            {FacingDirection.Up, new SpriteAnimator(walkUpSprites, renderer)},
+            {FacingDirection.Down, new SpriteAnimator(walkDownSprites, renderer)},
+            {FacingDirection.Right, new SpriteAnimator(walkRightSprites, renderer)},
+            {FacingDirection.Left, new SpriteAnimator(walkRightSprites, renderer, flipSprites: true)},
         };
 
         swingAxeAnims = new Dictionary<FacingDirection, SpriteAnimator> {
@@ -74,8 +74,8 @@ public class PlayerAnimator : MonoBehaviour {
         wateringCanAnims = new Dictionary<FacingDirection, SpriteAnimator> {
             {FacingDirection.Up, new SpriteAnimator(wateringCanUpSprites, renderer)},
             {FacingDirection.Down, new SpriteAnimator(wateringCanDownSprites, renderer)},
-            {FacingDirection.Left, new SpriteAnimator(wateringCanRightSprites, renderer)},
-            {FacingDirection.Right, new SpriteAnimator(wateringCanRightSprites, renderer, flipSprites: true)}
+            {FacingDirection.Right, new SpriteAnimator(wateringCanRightSprites, renderer)},
+            {FacingDirection.Left, new SpriteAnimator(wateringCanRightSprites, renderer, flipSprites: true)}
         };
 
         anims = new Dictionary<ItemAction, Dictionary<FacingDirection, SpriteAnimator>> {
