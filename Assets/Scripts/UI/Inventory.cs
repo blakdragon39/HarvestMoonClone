@@ -31,7 +31,6 @@ public class Inventory : MonoBehaviour {
     }
 
     private void OnItemSelected(Item item) {
-        Debug.Log($"item selected {item.name}");
         selectedItem = item;
 
         for (int i = 0; i < items.Count; i++) {

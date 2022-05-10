@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 using Vector2 = UnityEngine.Vector2;
 
 public class PlayerController : MonoBehaviour {
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         if (
-            Input.GetKeyDown(KeyCode.Z) &&
+            Input.GetMouseButtonDown(0) &&
             inventory.SelectedItem != null && 
             inventory.SelectedItem.ItemAction != ItemAction.None
         ) {

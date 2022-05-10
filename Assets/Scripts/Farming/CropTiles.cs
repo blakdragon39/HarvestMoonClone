@@ -43,7 +43,14 @@ public class CropTiles : MonoBehaviour {
 
     public void HoeTile() {
         if (crops.GetTile(highlightedTilePos) != null && !hoedTiles.Contains(highlightedTilePos)) {
-            cropsHoed.SetTile(highlightedTilePos, hoedTile);
+            for (int x = -1; x <= 1; x += 1) {
+                for (int y = -1; y <= 1; y += 1) {
+                    Vector3Int surroundingTile = new Vector3Int(highlightedTilePos.x + x, highlightedTilePos.y + y, highlightedTilePos.z);
+                    Debug.Log($"Hoeing tile at {surroundingTile}");
+                    cropsHoed.SetTile(surroundingTile, hoedTile);        
+                }
+            }
+            
             hoedTiles.Add(highlightedTilePos);
         }
     }
