@@ -44,11 +44,14 @@ TagManager:
   - name: Background
     uniqueID: 1523980331
     locked: 0
-  - name: Foreground
+  - name: SolidObjects
     uniqueID: 2250393607
     locked: 0
   - name: Player
     uniqueID: 1067088671
+    locked: 0
+  - name: Overlay
+    uniqueID: 164360297
     locked: 0
   - name: UI
     uniqueID: 1429227761
