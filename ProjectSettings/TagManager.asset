@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Crops
+  - 
   - 
   - 
   - 
@@ -44,13 +44,13 @@ TagManager:
   - name: Background
     uniqueID: 1523980331
     locked: 0
-  - name: SolidObjects
-    uniqueID: 2250393607
+  - name: Buildings
+    uniqueID: 159699947
     locked: 0
   - name: Player
     uniqueID: 1067088671
     locked: 0
-  - name: Overlay
+  - name: Foreground
     uniqueID: 164360297
     locked: 0
   - name: UI

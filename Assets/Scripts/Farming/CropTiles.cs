@@ -29,7 +29,7 @@ public class CropTiles : MonoBehaviour {
     private float growthTimer;
 
     private void Awake() {
-        grid = GetComponent<Grid>();
+        grid = GetComponentInParent<Grid>();
     }
 
     private void Update() {
@@ -46,7 +46,6 @@ public class CropTiles : MonoBehaviour {
             for (int x = -1; x <= 1; x += 1) {
                 for (int y = -1; y <= 1; y += 1) {
                     Vector3Int surroundingTile = new Vector3Int(highlightedTilePos.x + x, highlightedTilePos.y + y, highlightedTilePos.z);
-                    Debug.Log($"Hoeing tile at {surroundingTile}");
                     cropsHoed.SetTile(surroundingTile, hoedTile);        
                 }
             }
