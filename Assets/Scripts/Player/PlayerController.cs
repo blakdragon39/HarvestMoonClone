@@ -4,8 +4,8 @@ using Vector2 = UnityEngine.Vector2;
 public class PlayerController : MonoBehaviour {
     
     [SerializeField] private float moveSpeed;
-    [SerializeField] private CropTiles cropTiles;
-
+    
+    private CropTiles cropTiles;
     private Rigidbody2D rigidBody;
     private PlayerAnimator animator;
     private Inventory inventory;
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private Vector2 lastInput;
 
     private void Awake() {
+        cropTiles = FindObjectOfType<CropTiles>(); // todo might not exist in other scenes 
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimator>();
         inventory = GetComponent<Inventory>();
