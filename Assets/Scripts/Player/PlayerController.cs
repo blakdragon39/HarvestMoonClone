@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     private Vector2 lastInput;
 
     private void Awake() {
-        cropTiles = FindObjectOfType<CropTiles>(); // todo might not exist in other scenes 
+        cropTiles = FindObjectOfType<CropTiles>();
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimator>();
         inventory = GetComponent<Inventory>();

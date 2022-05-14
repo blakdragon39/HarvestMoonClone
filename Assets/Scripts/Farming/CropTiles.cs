@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class CropTiles : MonoBehaviour {
     
-    [SerializeField] private Tilemap crops;
+    [SerializeField] private Tilemap ground;
     [SerializeField] private Tilemap cropsHoed;
     [SerializeField] private Tilemap cropsWatered;
     [SerializeField] private Tilemap cropsPlanted;
@@ -42,7 +42,7 @@ public class CropTiles : MonoBehaviour {
     }
 
     public void HoeTile() {
-        if (crops.GetTile(highlightedTilePos) != null && !hoedTiles.Contains(highlightedTilePos)) {
+        if (ground.GetTile(highlightedTilePos) != null && !hoedTiles.Contains(highlightedTilePos)) {
             for (int x = -1; x <= 1; x += 1) {
                 for (int y = -1; y <= 1; y += 1) {
                     Vector3Int surroundingTile = new Vector3Int(highlightedTilePos.x + x, highlightedTilePos.y + y, highlightedTilePos.z);
@@ -74,7 +74,7 @@ public class CropTiles : MonoBehaviour {
         if (tilePos != highlightedTilePos) {
             cropHighlighted.SetTile(highlightedTilePos, null);
             
-            if (crops.GetTile(tilePos) != null) {
+            if (ground.GetTile(tilePos) != null) {
                 cropHighlighted.SetTile(tilePos, highlighted ? highlightTile : null);
             }
         
@@ -100,6 +100,6 @@ public class CropTiles : MonoBehaviour {
 
 static class CropTilesExtensions {
     public static Vector3Int GetCellPosition(this Vector3 position, Grid grid) {
-        return grid.WorldToCell(position);
+        return grid.WorldToCell((Vector2) position);
     }
 }
