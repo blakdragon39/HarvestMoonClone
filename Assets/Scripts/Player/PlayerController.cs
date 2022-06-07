@@ -1,3 +1,5 @@
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
@@ -39,6 +41,18 @@ public class PlayerController : MonoBehaviour {
         HighlightCropTiles();
     }
 
+    public IEnumerator MoveToPosAndWalk(Vector3 pos, Vector2 moveDirection) {
+        enabled = false;
+
+        var result = pos + moveDirection.ToVector3();
+        transform.position = pos;
+        input = moveDirection;
+        yield return transform.DOMove(result, .5f).WaitForCompletion();
+        input = Vector2.zero;
+
+        enabled = true;
+    }
+
     private void UpdateInput() {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
@@ -56,7 +70,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Move() {
-        rigidBody.MovePosition(transform.position.ToVector2() + input * moveSpeed * Time.deltaTime);
+        rigidBody.MovePosition((Vector2) transform.position + input * moveSpeed * Time.deltaTime);
     }
 
     private void HandleItemAction() {
@@ -83,11 +97,5 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 GetFacingTilePos() {
         return transform.position + (animator.GetFacingDirection().FacingTileVector());
-    }
-}
-
-public static class Vector3Ext {
-    public static Vector2 ToVector2(this Vector3 vector3) {
-        return new Vector2(vector3.x, vector3.y);
     }
 }

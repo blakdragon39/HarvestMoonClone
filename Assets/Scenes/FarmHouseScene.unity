@@ -2328,6 +2328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitPortal
       objectReference: {fileID: 0}
+    - target: {fileID: 7364847607895253766, guid: 44e86986194fe4542b36cff9e6893bd6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7364847607895253767, guid: 44e86986194fe4542b36cff9e6893bd6, type: 3}
       propertyPath: m_RootOrder
       value: 2

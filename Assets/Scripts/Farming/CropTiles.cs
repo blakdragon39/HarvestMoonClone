@@ -83,8 +83,8 @@ public class CropTiles : MonoBehaviour {
     }
     
     public void UnhighlightTiles() {
-        cropHighlighted.SetTile(highlightedTilePos, null);
-        highlightedTilePos = Vector3Int.zero;
+        // cropHighlighted.SetTile(highlightedTilePos, null);
+        // highlightedTilePos = Vector3Int.zero;
     }
     
     private void ProgressCrops() {
