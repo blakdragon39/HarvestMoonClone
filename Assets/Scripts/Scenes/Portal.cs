@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,8 @@ public class Portal : MonoBehaviour {
     [SerializeField] private string portalId; 
     [SerializeField] private string destPortalId;
     [SerializeField] private Vector2 spawnDirection;
+
+    [SerializeField] [CanBeNull] private Door door;
     
     private void OnTriggerEnter2D(Collider2D col) {
         if (sceneSwitching) return;
@@ -26,18 +29,20 @@ public class Portal : MonoBehaviour {
         sceneSwitching = true;
         DontDestroyOnLoad(gameObject);
         
-        // todo pause input?
+        if (door != null) {
+            yield return door.OpenDoor();    
+        }
+        
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
-        // todo door animation and fade
+        // todo fade?
 
         var destPortal = FindObjectsOfType<Portal>()
             .First(portal => portal.portalId == destPortalId);
-
+        
         yield return player.MoveToPosAndWalk(destPortal.gameObject.transform.position, spawnDirection);
         
-        // todo fade back in
+        // todo fade back in?
         
-        // todo unpause input?
         Destroy(gameObject);
         sceneSwitching = false;
     }
